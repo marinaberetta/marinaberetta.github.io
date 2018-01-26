@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+# retira index.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html/$1 [L]
+</IfModule>
